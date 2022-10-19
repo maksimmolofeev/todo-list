@@ -1,0 +1,157 @@
+// Import all of Bootstrap's CSS
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #f5f5f5;
+}
+
+.todo_app {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    header {
+        width: 100%;
+        max-width: 800px;
+        min-width: 450px;
+
+        .title {
+            margin-top: 0px;
+            margin-bottom: 50px;
+            color: rgba(175, 47, 47, 0.15);
+            font-size: 130px;
+            text-align: center;
+            
+        }
+        
+        .input_todo {
+            display: flex;
+            width: 100%;
+            max-width: 800px;
+            min-width: 450px;
+            height: 70px;
+            
+            background-color: #ffffff;
+            box-shadow: inset 2px 2px 5px rgba(78, 78, 78, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+
+            .new_todo {
+                width: 100%;
+                padding: 10px 40px 10px 60px;
+                border: none;
+                font-size: 24px;
+                outline:none;
+                border-bottom: 1px solid #ededed;
+                &::placeholder {
+                    margin-left: 50px;
+                    color: rgba($color: gray, $alpha: 0.4);
+                }
+            }
+        }
+    }
+    
+    main {
+        width: 100%;
+        max-width: 800px;
+        min-width: 450px;
+        display: flex;
+        justify-content: flex-start;
+        ul {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+
+            li {
+                list-style: none;
+    
+                .form-check {
+                    margin: 0 auto;
+                    width: 100%;
+                    max-width: 800px;
+                    min-width: 450px;
+                    height: 70px;
+                    display: flex;
+                    align-items: center;
+                    background-color: #ffffff;
+                    border-bottom: 1px solid #ededed;
+                    //box-shadow: inset 2px 2px 5px rgba(78, 78, 78, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+
+                    .todo-close {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 20px;
+                        margin-left: 0;
+                    }
+
+                    .todo-label {
+                        width: 100%;
+                        padding: 10px 40px 10px 20px;
+                        font-size: 24px;
+                    }
+
+                    .clossed-out {
+                        text-decoration: line-through;
+                    }
+
+                    .close {
+                        margin-right: 10px;
+                    }
+
+                }
+    
+        }
+        }
+    }
+    
+    footer {
+        .footer_content {
+            width: 100%;
+            max-width: 800px;
+            min-width: 450px;
+            height: 50px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #ededed;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .todo-count {
+                margin-left: 5px;
+            }
+
+            .filters {
+                width: 30%;
+                height: 50px;
+                display: flex;
+                justify-content: space-between;
+                align-content: stretch;
+                align-items: center;
+    
+                p {
+                    margin: 0px;
+                    cursor: pointer;
+
+                    &.selected {
+                        padding: 3px;
+                        border: 1px solid rgba(175, 47, 47, 0.2);
+                        border-radius: 2px;
+                    }
+                }
+            }
+
+            .clear {
+                float: right;
+            }
+        }
+
+    }
+
+}
